@@ -8,13 +8,18 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+.container{
+    display: flex;
+
+}
+
 /*---HEADER---*/
 
 header{
     display: inline-block;
     width: 250px;
     height: 100vh;
-    padding: 15px 60px 10px 15px;
+    padding: 15px 80px 10px 15px;
     background-color: #000000;
 }
 
@@ -124,13 +129,29 @@ header nav .nav-down .profile span{
 }
 
 
-
-
-
-
-
-
+/*---MAIN---*/
 
 main{
-    display: inline-block;
+    width: calc(100vw - 250px);
+    background-color: #141922;
+}
+
+main .up-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 80px;
+    background-color: #0000003b;
+    padding-right: 8px;
+}
+
+main .up-bar button{
+    color:white;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+
+    padding: 15px 40px;
 }
