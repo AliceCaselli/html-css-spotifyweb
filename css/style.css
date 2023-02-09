@@ -137,6 +137,7 @@ header nav .nav-down .profile span{
 main{
     width: calc(100vw - 200px);
     background-color: #141922;
+    overflow: auto;
 }
 
 main .up-bar{
@@ -159,11 +160,101 @@ main .up-bar button{
     padding: 15px 40px;
 }
 
+/*---main links---*/
+
+main .links-nav{
+    padding: 30px;
+}
+
+main .links-nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+
+    color: #a3a3a3;
+    font-weight: bold;
+    font-size: 0.8em;
+}
 
 
+/*---main covers---*/
+
+main section h2{
+    margin-left: 20px;
+    font-size: 1.3em;
+}
+
+main section .cover-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+main section .cover-row .cover{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(100% / 6 - (20px / 6 * 5));
+    min-width: 200px;
+}
+
+main section .cover-row .cover-img{
+    position: relative;
+    width: 100%;
+}
+
+main section .cover-row .cover-img img{
+    width: 100%;
+}
+
+main section .cover-row .cover .cover-detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+main section .cover-row .cover .cover-detail strong{
+    font-size: 0.8em;
+}
+
+main section .cover-row .cover .cover-detail span{
+    font-size: 0.7em;
+    color: #a3a3a3;
+}
+
+/*absolute player*/
+
+main section .cover-row .cover .player-icon{
+    /* display: none; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
+}
 
 
+/*---section john doe---*/
 
+main section > span{
+    font-size: 0.8em;
+    color: #a3a3a3;
+    margin-left: 20px;
+}
+
+
+/*---artists--*/
+
+main section .cover-row .cover .cover-img.img-round img{
+    border-radius: 50%;
+}
 
 
 
