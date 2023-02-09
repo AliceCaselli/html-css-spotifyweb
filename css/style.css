@@ -6,9 +6,11 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .container{
+    height: calc(100vh - 80px);
     display: flex;
 
 }
@@ -17,9 +19,9 @@ body{
 
 header{
     display: inline-block;
-    width: 250px;
-    height: 100vh;
-    padding: 15px 80px 10px 15px;
+    width: 200px;
+    height: 100%;
+    padding: 15px 65px 10px 15px;
     background-color: #000000;
 }
 
@@ -56,10 +58,11 @@ header nav .nav-up .home a{
     gap: 0.5rem;
     color: #a3a3a3;
     text-decoration: none;
+    font-size: 0.7em;
 }
 
 header nav .nav-up .home img{
-    width: 30px;
+    width: 20px;
 }
 
 header nav .nav-up .playlist{
@@ -69,16 +72,17 @@ header nav .nav-up .playlist{
 }
 
 header nav .nav-up .playlist strong{
-    color: white;
+    font-size: 0.7em;
 }
 
 header nav .nav-up .playlist .new-playlist i{
     background-color: #a3a3a3;
-    padding: 10px;
-    margin-right: 8px;
+    padding: 7px;
+    margin-right: 5px;
 }
 
 header nav .nav-up .playlist span{
+    font-size: 0.8em;
     color: #a3a3a3;
 }
 
@@ -87,7 +91,7 @@ header nav .nav-up .playlist .list-playlist{
     flex-direction: column;
     gap: 1.2rem;
 
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 /*---nav down---*/
@@ -105,7 +109,7 @@ header nav .nav-down .download img{
 
 header nav .nav-down .download span{
     color: #a3a3a3;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 header nav .nav-down .profile{
@@ -123,8 +127,7 @@ header nav .nav-down .profile img{
 }
 
 header nav .nav-down .profile span{
-    color: white;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-weight: bold;
 }
 
@@ -132,7 +135,7 @@ header nav .nav-down .profile span{
 /*---MAIN---*/
 
 main{
-    width: calc(100vw - 250px);
+    width: calc(100vw - 200px);
     background-color: #141922;
 }
 
@@ -147,11 +150,155 @@ main .up-bar{
 }
 
 main .up-bar button{
-    color:white;
     font-weight: bold;
     background-color: transparent;
+    color: white;
     border: 1px solid white;
     border-radius: 30px;
 
     padding: 15px 40px;
+}
+
+
+
+
+
+
+
+
+
+/*---FOOTER---*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #282828;
+    height: 80px;
+}
+
+footer .foot-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 240px;
+
+    padding: 20px 10px;
+}
+
+footer .foot-left .cover-playing{
+    height: 100%;
+    margin-right: 10px;
+}
+
+footer .foot-left .cover-playing img{
+    height: 100%;
+}
+
+footer .foot-left .details-playing{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+footer .foot-left .details-playing strong{
+    font-size: 0.8em;
+}
+
+footer .foot-left .details-playing span{
+    color:#a3a3a3;
+    font-size: 0.8em;
+}
+
+footer .foot-left .playing-icons{
+    display: flex;
+    gap: 15px;
+}
+
+footer .foot-left .playing-icons .fa-regular{
+    color: #a3a3a3;
+}
+
+
+/*---footer center---*/
+
+footer .foot-center{
+    height: 100%;
+    width: 100%;
+    max-width: 530px;
+    min-width: 200px;
+}
+
+footer .foot-center .up-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+footer .foot-center .up-center .fa-regular{
+    font-size: 1.8em;
+}
+
+footer .foot-center .down-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .foot-center .down-center .time-set,
+footer .foot-center .down-center .time-song-total{
+    font-size: 0.7em;
+}
+
+footer .foot-center .down-center .max-bar{
+    height: 4px;
+    width: 400px;
+    background-color: #a3a3a36e;
+    border-radius: 3px;
+}
+
+footer .foot-center .down-center .max-bar .play-max-bar{
+    height: 100%;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 3px;
+}
+
+
+
+
+
+
+/*---footer right---*/
+
+footer .foot-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 240px;
+
+    padding: 20px 10px;
+}
+
+footer .foot-right .fa-solid{
+    font-size: 0.8em;
+}
+
+footer .foot-right .minibar{
+    height: 4px;
+    width: 100px;
+    background-color: #a3a3a36e;
+    border-radius: 3px;
+}
+
+footer .foot-right .minibar .play-minibar{
+    height: 100%;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 3px;
 }
