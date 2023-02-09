@@ -141,13 +141,16 @@ main{
 }
 
 main .up-bar{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 1;
 
+    width: calc(100% - 200px);
     height: 80px;
     background-color: #0000003b;
-    padding-right: 8px;
+    padding-right: 25px;
 }
 
 main .up-bar button{
@@ -163,6 +166,7 @@ main .up-bar button{
 /*---main links---*/
 
 main .links-nav{
+    margin-top: 90px;
     padding: 30px;
 }
 
@@ -179,7 +183,17 @@ main .links-nav ul{
     font-size: 0.8em;
 }
 
+main .links-nav ul li:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
 
+main .links-nav ul li > hr{
+    border-color: #adff2f;
+    width: 30px;
+}
 /*---main covers---*/
 
 main section h2{
@@ -261,9 +275,12 @@ main section .cover-row .cover .cover-img.img-round img{
 /*---FOOTER---*/
 
 footer{
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
     background-color: #282828;
+    width: 100%;
     height: 80px;
 }
 
