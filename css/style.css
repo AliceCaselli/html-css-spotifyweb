@@ -11,6 +11,7 @@ body{
 
 .container{
     height: calc(100vh - 80px);
+    width: 100vw;
     display: flex;
 
 }
@@ -18,19 +19,28 @@ body{
 /*---HEADER---*/
 
 header{
-    display: inline-block;
-    width: 200px;
     height: 100%;
-    padding: 15px 65px 10px 0px;
+    display: inline-block;
     background-color: #000000;
 }
 
 header nav{
     height: 100%;
+}
+
+header nav #desktop{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    width: 200px;
+    height: 100%;
+
+    padding: 15px 65px 10px 0px;
+
 }
+
+
 
 
 /*---nav up...*/
@@ -142,6 +152,45 @@ header nav .nav-down .profile span{
 }
 
 
+
+/*---nav MOBILE---*/
+
+header nav #mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    
+    height: 100%;
+    width: 50px;
+    padding: 5px 10px;
+
+    display: none;
+
+}
+
+header nav #mobile .nav-up .home a{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1.8rem;
+    padding: 0;
+}
+
+header nav #mobile .nav-down{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+header nav #mobile .nav-down .profile img{
+    width: 20px;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+}
+
+
 /*---nav HOVER---*/
 
 header nav .nav-up .home ul li:hover{
@@ -162,7 +211,7 @@ header nav .nav-down span:hover{
 /*---MAIN---*/
 
 main{
-    width: calc(100vw - 200px);
+    width: calc(100% - 200px);
     background-color: #141922;
     overflow: auto;
 }
@@ -389,6 +438,7 @@ footer .foot-left .details-playing span{
 
 footer .foot-left .playing-icons{
     display: flex;
+    flex-direction: row;
     gap: 15px;
 }
 
@@ -430,6 +480,7 @@ footer .foot-center .down-center .time-song-total{
 }
 
 footer .foot-center .down-center .max-bar{
+    position: relative;
     height: 4px;
     width: 400px;
     background-color: #a3a3a36e;
@@ -443,7 +494,16 @@ footer .foot-center .down-center .max-bar .play-max-bar{
     border-radius: 3px;
 }
 
-
+footer .foot-center .down-center .max-bar .playing-cursor{
+    display: none;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 25%;
+    top: -10px;
+    background-color: white;
+    border-radius: 50%;
+}
 
 
 
@@ -466,6 +526,7 @@ footer .foot-right .fa-solid{
 }
 
 footer .foot-right .minibar{
+    position: relative;
     height: 4px;
     width: 100px;
     background-color: #a3a3a36e;
@@ -474,9 +535,20 @@ footer .foot-right .minibar{
 
 footer .foot-right .minibar .play-minibar{
     height: 100%;
-    width: 20%;
+    width: 25%;
     background-color: rgba(255, 255, 255, 0.445);
     border-radius: 3px;
+}
+
+footer .foot-right .minibar .playing-cursor{
+    display: none;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: 25%;
+    top: -7px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 
@@ -489,7 +561,80 @@ footer .foot-left .details-playing span:hover{
     cursor: pointer;
 }
 
-footer .foot-left .details-playing .playing-icons .fa-regular:hover{
+footer .foot-left .playing-icons .fa-regular:hover{
     color: white;
     cursor: pointer;
+}
+
+footer .foot-center .up-center .fa-regular:hover{
+    transform: scale(1.2);
+}
+
+
+footer .foot-center .down-center .max-bar:hover .play-max-bar{
+    background-color: #adff2f;
+}
+
+footer .foot-center .down-center .max-bar:hover .playing-cursor{
+    display: block;
+    cursor: pointer;
+}
+
+footer .foot-right .minibar:hover .play-minibar{
+    background-color: #adff2f;
+}
+
+footer .foot-right .minibar:hover .playing-cursor{
+    display: block;
+    cursor: pointer;
+}
+
+
+/*---MEDIA-------------*/
+
+@media screen and (max-width: 767px){
+
+    .container header nav #desktop{
+        display: none;
+    }
+
+    .container header nav #mobile{
+        display: block;
+    }
+
+    .container main{
+        width: calc(100% - 50px);
+    }
+
+    .container main .up-bar{
+        width: calc(100% - 50px);
+    }
+
+    footer .foot-left{
+        transform: scale(0.8);
+        gap: 5px;
+        flex-shrink: 2;
+    }
+
+    footer .foot-left .playing-icons{
+        flex-direction: column;
+    }
+
+    footer .foot-right{
+        transform: scale(0.8);
+        gap: 5px;
+
+        flex-shrink: 2;
+    }
+
+    .container footer .foot-center{
+        transform: scale(0.8);
+        
+        flex-shrink: 1;
+    }
+
+    footer .foot-center .down-center{
+        gap: 5px;
+    }
+
 }

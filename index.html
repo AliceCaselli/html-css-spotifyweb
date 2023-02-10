@@ -26,118 +26,188 @@
 
             <nav>
 
-                <!-- first section: logo, icons, playlists  -->
+                <div id="desktop">
 
-                <div class="nav-up">
+                    
+                    <!-- first section: logo, icons, playlists  -->
+                    
+                    <div class="nav-up">
                 
-                    <div class="logo">
-                    
-                        <img src="img/logo.svg" alt="">
-                    
-                    </div>
-                
-                    <div class="home">
-                    
-                        <ul>
+                        <div class="logo">
+                            
+                            <img src="img/logo.svg" alt="">
+                            
+                        </div>
                         
-                            <li class="active">
-                                <a href="#">
+                        <div class="home">
+                            
+                            <ul>
                                 
-                                    <img src="img/home.svg" alt="">
-                                    <span>Home</span>
+                                <li class="active">
+                                    <a href="#">
+                                        
+                                        <img src="img/home.svg" alt="">
+                                        <span>Home</span>
+                                        
+                                    </a>
+                                </li>
                                 
-                                </a>
-                            </li>
-                        
-                            <li>
-                                <a href="#">
+                                <li>
+                                    <a href="#">
+                                        
+                                        <img src="img/search.svg" alt="">
+                                        <span>Cerca</span>
+                                        
+                                    </a>
+                                </li>
                                 
-                                    <img src="img/search.svg" alt="">
-                                    <span>Cerca</span>
-                                
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                
+                                <li>
+                                    <a href="#">
+                                        
                                     <img src="img/libreria.svg" alt="">
                                     <span>La tua libreria</span>
                                 
                                 </a>
                             </li>
-                        </ul>
-
+                            </ul>
+                        
+                        
+                        </div>
                     
-                    </div>
-                
                     <div class="playlist">
-                    
+                        
                         <strong>PLAYLIST</strong>
-                    
+                        
                         <div class="new-playlist">
-
+                            
                             <i class="fa-solid fa-plus"></i>
-                        
+                            
                             <span>Crea Playlist</span>
-                        
+                            
                         </div>
-                    
+                        
                         <div class="list-playlist">
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                             <span>Nome Playlist</span>
-                        
+                            
                         </div>
+                        
+                    </div>
                     
                     </div>
                 
-                </div>
-            
-                <!-- second section  -->
-            
-                <div class="nav-down">
+                    <!-- second section  -->
+                
+                    <div class="nav-down">
                 
                     <div class="download">
-                    
+                        
                         <img src="img/download.svg" alt="">
                     
                         <span>Installa app</span>
-                    
+                        
                     </div>
-                
+                    
                     <hr>
-                
+                    
                     <div class="profile">
-                    
+                        
                         <img src="img/profile.svg" alt="">
-                    
+                        
                         <span>John Doe</span>
+                        
+                    </div>
                     
                     </div>
-                
+
                 </div>
 
+                <div id="mobile">
+                      
+                    <!-- first section: logo, icons, playlists  -->
+                    
+                    <div class="nav-up">
+                
+                        <div class="logo">
+                            
+                            <img src="img/logo-small.svg" alt="">
+                            
+                        </div>
+                        
+                        <div class="home">
+                            
+                            <ul>
+                                
+                                <li>
+                                    <a href="#">
+                                        
+                                        <img src="img/home.svg" alt="">
+                                        
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        
+                                        <img src="img/search.svg" alt="">
+                                        
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#">
+                                        
+                                    <img src="img/libreria.svg" alt="">
+                                
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                    
+                    </div>
+                    
+                    <!-- second section  -->
+                
+                    <div class="nav-down">
+                
+                        <div class="download">
+                        
+                            <img src="img/download.svg" alt="">
+                    
+                        </div>
+                    
+                        <div class="profile">
+                        
+                            <img src="img/profile.svg" alt="">
+                        
+                        </div>
+                    
+                    </div>
+
+                </div>
+                
             </nav>
-
+            
         </header>
-
+        
         <!-- END HEADER  -->
-    
-    
+        
+        
         <!-- MAIN  -->
-    
+        
         <main>
         
             <!-- section transparent  -->
@@ -498,6 +568,8 @@
                     <div class="play-max-bar">
 
                     </div>
+                    
+                    <div class="playing-cursor"></div>
 
                 </div>
 
@@ -516,9 +588,11 @@
             <i class="fa-solid fa-volume-high"></i>
 
             <div class="minibar">
-                <div class="play-minibar">
 
-                </div>
+                <div class="play-minibar"></div>
+
+                <div class="playing-cursor"></div>
+
 
             </div>
 
